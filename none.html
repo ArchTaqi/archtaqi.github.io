@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>My Sample</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+<script type="text/javascript"> 
+var new_num = 40; // global variable
+jQuery(document).ready(function(){ 
+$.ajax({
+    url: "https://api-dev.lexim.io/dau/info",
+    type: "GET", // Assuming the endpoint requires a GET request
+    dataType: "json", // Assuming the response is expected in JSON format
+    success: function(response) {
+        // Handle successful response here
+        console.log(response);
+    },
+    error: function(xhr, status, error) {
+        // Handle errors here
+        console.log("Error: " + error);
+    }
+});
+});
+</script>
+</head>
+<body>
+
+	<p>Hello</p>
+
+	<p>World</p>
+
+	<div id="countme">0</div>
+
+	<a href="http://api.jquery.com/">Learn more about jQuery's methods</a>
+
+</body>
+</html>
